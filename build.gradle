@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.example.jdd"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    /*内存泄漏检测工具 **/
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    implementation "io.reactivex.rxjava2:rxjava:2.1.3" // 必要rxjava2依赖
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1" // 必要rxandrroid依赖，切线程时需要用到
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.google.code.gson:gson:2.2.4'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'        //网络请求   Retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'    //网络请求所用Gson
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'    //网络加载图片
+    implementation 'com.android.support:design:29.0.1'    //tablayout依赖：
+    implementation 'com.android.support:recyclerview-v7:29.0.1'    //RecyclerView
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'    //网络加载图片
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    implementation 'com.jakewharton:butterknife:10.2.0'        //butter
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //badgeview
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
+
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+
+    dependencies {
+        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+        releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    }
+
+
+    /*androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0' //ViewPAger2
+    implementation 'com.google.android.material:material:1.0.0'
+
+
+    dependencies {
+        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+        releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    }
+    //三方封装的适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'*/
+}
