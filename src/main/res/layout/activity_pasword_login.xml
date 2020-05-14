@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <ImageView
+        android:id="@+id/tap_img1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/jiandaodenglu_1"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <EditText
+
+        android:id="@+id/cell_phone_num"
+        android:layout_width="300dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_height="70dp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tap_img1"
+        android:hint="请输入手机号"
+        tools:ignore="MissingConstraints"
+        />
+
+    <EditText
+
+        android:id="@+id/import_pass"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cell_phone_num"
+        android:hint="请输入密码"
+        tools:ignore="MissingConstraints"
+       />
+
+    <TextView
+        android:id="@+id/forget_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="11dp"
+        android:text="忘记密码"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/import_pass"
+        app:layout_constraintLeft_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/pass_login"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:text="登录"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/import_pass"
+        app:layout_constraintLeft_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/verification_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证码登录"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pass_login"
+        tools:ignore="MissingConstraints"
+        />
+    <TextView
+        android:id="@+id/go_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        android:text="立即注册"
+        app:layout_constraintTop_toBottomOf="@id/pass_login"
+        tools:ignore="MissingConstraints"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

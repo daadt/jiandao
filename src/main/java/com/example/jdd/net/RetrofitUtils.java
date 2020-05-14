@@ -92,7 +92,6 @@ public class RetrofitUtils implements INetWork{
                         try {
                         String body = responseBody.string();
 
-                        Log.e("TAG","网络请求GET方法打印："+body);
 
                         Type[] genericInterfaces = netCallBack.getClass().getGenericInterfaces();
                         Type[] actualTypeArguments = ((ParameterizedType) genericInterfaces[0]).getActualTypeArguments();
@@ -111,9 +110,7 @@ public class RetrofitUtils implements INetWork{
 
                     @Override
                     public void onError(Throwable e) {
-
                     }
-
                     @Override
                     public void onComplete() {
 
@@ -123,11 +120,6 @@ public class RetrofitUtils implements INetWork{
 
     @Override
     public <T> void get(String url, HashMap<String, String> s,final INetCallBack<T> netCallBack) {
-
-
-
-
-        Log.e("TAG","网络请求执行了");
 
         netApi.get(url,s)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -154,16 +146,14 @@ public class RetrofitUtils implements INetWork{
                             T t = gson.fromJson(body, type);
                             netCallBack.onSuccess(t);
 
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                        } catch (Exception e) {
+                       //     e.printStackTrace();
                         }
 
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
-                        Log.e("TAG","请问错误="+e.getMessage());
                     }
 
                     @Override
@@ -177,10 +167,51 @@ public class RetrofitUtils implements INetWork{
     @Override
     public <T> void post(String url,INetCallBack<T> netCallBack) {
 
+
     }
 
     @Override
     public <T> void post(String url, HashMap<String, String> s,INetCallBack<T> netCallBack) {
+        netApi.post(url,s)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<ResponseBody>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+                    @Override
+                    public void onNext(ResponseBody responseBody) {
+
+                        try {
+                            String body = responseBody.string();
+
+                            LogUtils.e("TAG","网络请求GET方法打印："+body);
+
+                            Type[] genericInterfaces = netCallBack.getClass().getGenericInterfaces();
+                            Type[] actualTypeArguments = ((ParameterizedType) genericInterfaces[0]).getActualTypeArguments();
+                            Log.e("NetWorkFactory", "网络数据: "+body);
+                            Type type =  actualTypeArguments[0];
+
+                            Gson gson = new Gson();
+                            T t = gson.fromJson(body, type);
+                            netCallBack.onSuccess(t);
+
+                        } catch (Exception e) {
+                            //     e.printStackTrace();
+                        }
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
 
     }
 

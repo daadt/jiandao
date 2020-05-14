@@ -9,8 +9,6 @@ import java.util.Stack;
 
 public class AppManager {
 
-//    初始化  Actiivyt和Fragment 管理栈
-//    人为写的一个   集合
     private static Stack<Activity> activityStack = new Stack<>();
     private static Stack<Fragment> fragmentStack = new Stack<>();
 
@@ -30,27 +28,17 @@ public class AppManager {
         return appManager;
     }
 
-    /**
-     * 获取所有Acitvity
-     * @return
-     */
+
     public static Stack<Activity> getActivityStack(){
         return activityStack;
     }
 
-    /**
-     * 获取所有Fragment
-     * @return
-     */
+
     public static Stack<Fragment> getFragmentStack(){
         return fragmentStack;
     }
 
 
-    /**             A  B C D EF
-     * 先进后出
-     * @param activity
-     */
     public void addActivity(Activity activity){
         if (activityStack == null){
             activityStack = new Stack<>();
@@ -65,9 +53,6 @@ public class AppManager {
         }
     }
 
-    /**
-     *删除当前Activity
-     */
     public void deleteActivity(){
         Activity activity = activityStack.lastElement();
         if(activity!= null){
@@ -77,12 +62,8 @@ public class AppManager {
         }
     }
 
-    //  Fragment   和Activity类似
 
 
-    /**
-     * 当应用退出以后，需要结束掉所有Acitviy
-     */
     public void appExit(){
         for (int i = 0; i < activityStack.size(); i++) {
             if (null != activityStack.get(i)){

@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="60dp" />
+        tools:layout_editor_absoluteY="60dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="#55000000"

@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".home.view.fragment.NewsFragment">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/banner_viewpage"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news_recycleview"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="match_parent"/>
 
-
-    <com.example.jdd.home.view.Banner_Indicator
-        android:id="@+id/banner_indicator"
-        android:layout_width="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/banner_viewpage"
-        android:layout_height="2dp"
-        tools:ignore="MissingConstraints" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,6 @@ public class HomeModelImpl extends BaseModel implements HomeContract.IHomeMode {
 
     @Override
     public <T> void getHomeBannview(INetCallBack<T> netCallBack) {
-//        网络请求i结束了   参数如何构建
         iHomePresenter.callHomeBannview("");
         NetWorkFactory.getInstance().getNetWork().get("/app/ssdf",netCallBack);
     }

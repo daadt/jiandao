@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.jdd.home.view.fragment.NewsFragment;
+
 import java.util.List;
 
 public class NewsFragmentAdapter extends FragmentPagerAdapter {
@@ -20,7 +21,6 @@ public class NewsFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         return fragments.get(position);
-
     }
 
     @Override

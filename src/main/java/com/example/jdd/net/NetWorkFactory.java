@@ -2,8 +2,6 @@ package com.example.jdd.net;
 
 public class NetWorkFactory {
 
-//    制造产品
-//    RetrfitUtils .HttpUrlConnettionUtils
 
     private static int NET_TYPE = 1;
 

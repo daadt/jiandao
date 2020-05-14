@@ -21,7 +21,6 @@ public class RecommendModel implements RecommendContract.IRecommendMode {
         commonParams.put("start","0");
         commonParams.put("number ","0");
         commonParams.put("point_time","0");
-//        此处  -- 登录以后，  需要修改
 
         for (String key: commonParams.keySet()) {
             Log.e("TAG","key="+key+",values="+commonParams.get(key));
@@ -34,7 +33,6 @@ public class RecommendModel implements RecommendContract.IRecommendMode {
     public <T> void getColumList(INetCallBack<T> iNetCallBack) {
 
         HashMap<String, String> commonParams = ParamsUtils.getCommonParams();
-//        commonParams.put("token","");
 
         for (String key: commonParams.keySet()) {
             Log.e("TAG","key="+key+",values="+commonParams.get(key));

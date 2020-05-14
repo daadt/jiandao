@@ -1,7 +1,5 @@
 package com.example.jdd.home.view;
 
-import android.util.Log;
-import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -134,10 +132,7 @@ public class HomeActivity extends BaseActivity<HomePresenterImpl> implements Hom
             }
         });
     }
-
-
     @Override
     public void setBannView(String string) {
-//        得到bannview的数据了
     }
 }

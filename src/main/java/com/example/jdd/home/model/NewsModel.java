@@ -19,8 +19,6 @@ public class NewsModel implements NewsFragmentContract.INewsMode {
         commonParams.put("start","0");
         commonParams.put("number ","0");
         commonParams.put("point_time","0");
-//        此处  -- 登录以后，  需要修改
-
         for (String key: commonParams.keySet()) {
             Log.e("TAG","key="+key+",values="+commonParams.get(key));
         }

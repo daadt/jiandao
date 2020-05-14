@@ -22,9 +22,6 @@ public class MainPresenter  extends BasePresenter<MainActivity> implements MainC
             @Override
             public void onSuccess(RemBean remBean) {
 
-
-                Log.e("TAG","打印网络请求返回实体类:"+remBean.toString());
-
             }
 
             @Override

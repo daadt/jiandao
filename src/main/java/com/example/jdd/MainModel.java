@@ -28,7 +28,6 @@ public  class MainModel  extends BaseModel implements MainContract.IMainMode {
         commonParams.put("point_time ","0");
 
         for (String key: commonParams.keySet()) {
-            Log.e("TAG","key="+key+",values="+commonParams.get(key));
         }
 
         NetWorkFactory.getInstance().getNetWork().get(URLConstants.VEDIO_LIST,commonParams ,netCallBack);

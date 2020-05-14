@@ -9,16 +9,13 @@ import com.example.jdd.home.view.HomeActivity;
 import com.example.jdd.net.INetCallBack;
 
 public class HomePresenterImpl extends BasePresenter<HomeActivity> implements HomeContract.IHomePresenter {
-
     private HomeContract.IHomeMode  iHomeMode;
-
 
     public HomePresenterImpl() {
         iHomeMode = new HomeModelImpl(this);
     }
     @Override
     public void callHomeBannview(String string) {
-
         mview.setBannView(string);
     }
     @Override
@@ -26,9 +23,7 @@ public class HomePresenterImpl extends BasePresenter<HomeActivity> implements Ho
         iHomeMode.getHomeBannview(new INetCallBack<User>() {
             @Override
             public void onSuccess(User user) {
-
             }
-
             @Override
             public void onError(Throwable throwable) {
 

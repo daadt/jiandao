@@ -11,9 +11,6 @@ import com.example.jdd.base.BaseActivity;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.IMainView  {
 
-
-
-
     @Override
     protected MainPresenter initPresenter() {
         return new MainPresenter();

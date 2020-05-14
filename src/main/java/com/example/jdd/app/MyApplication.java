@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.squareup.leakcanary.LeakCanary;
+import com.tencent.mmkv.MMKV;
 
 
 public class MyApplication extends Application {
@@ -18,10 +19,8 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        //        初始化内存泄漏检测工具
-
+        MMKV.initialize(this);
         myApplication=this;
-        //RxToolc.init(this);
         initLeakCanary();
 
         registerActivityLifecycleCallbacks(activityLifecycleCallbacks);

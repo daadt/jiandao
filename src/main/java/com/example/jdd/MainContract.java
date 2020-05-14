@@ -9,7 +9,6 @@ import com.example.jdd.net.INetCallBack;
 public class MainContract {
 
         public interface IMainView extends BaseView {
-
         }
 
         public interface IMainMode{

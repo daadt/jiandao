@@ -32,8 +32,6 @@ public abstract class BaseActivity <P extends BasePresenter>extends AppCompatAct
 
     public abstract  int getLayoutID();
 
-//    模板模式   规定子类需要干什么   Fragment   attachview
-
 
     @Override
     protected void onDestroy() {

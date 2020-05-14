@@ -28,17 +28,12 @@ public class RecommendPresenter extends BasePresenter<RecommendContract.IRecomme
             public void onSuccess(ColunmBean remBean) {
 
                 mview.setColumList(remBean);
-
             }
-
             @Override
             public void onError(Throwable throwable) {
-
             }
         });
-
     }
-
     @Override
     public void getRecommendList(String id) {
 
@@ -47,12 +42,10 @@ public class RecommendPresenter extends BasePresenter<RecommendContract.IRecomme
             public void onSuccess(NewsBean remBean) {
 
                mview.setRecommendList(remBean);
-
             }
 
             @Override
             public void onError(Throwable throwable) {
-
             }
         });
 

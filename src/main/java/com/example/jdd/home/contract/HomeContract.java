@@ -21,6 +21,5 @@ public class HomeContract {
         public interface IHomePresenter{
             void callHomeBannview(String string);
             void getBannerView();
-//            它两交互时候，需要什么操作
         }
 }
